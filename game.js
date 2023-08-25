@@ -52,32 +52,30 @@ let questions = [
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 4;
 
-
 startGame = () => {
-    questionCounter = 0;
-    timeRemaining = 60; // Reset the time
-    score = 0; // Reset the score
-    availableQuestions = [...questions];
-    getNewQuestion();
-    // Start the countdown timer
-    startTimer();
-  };
+  questionCounter = 0;
+  timeRemaining = 60; // Reset the time
+  availableQuestions = [...questions];
+  getNewQuestion();
+  // Start the countdown timer
+  startTimer();
+};
 
-  startTimer = () => {
-    const timerInterval = setInterval(() => {
-      timeRemaining--;
-      scoreText.innerText = timeRemaining;
-  
-      if (timeRemaining <= 0) {
-        clearInterval(timerInterval);
-        endGame();
-      }
-    }, 1000);
-  };
+startTimer = () => {
+  const timerInterval = setInterval(() => {
+    timeRemaining--;
+    scoreText.innerText = timeRemaining;
 
+    if (timeRemaining <= 0) {
+      clearInterval(timerInterval);
+      endGame();
+    }
+  }, 1000);
+};
+//sets most recent score to time remaining
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-    localStorage.setItem("mostRecentScore", score);
+    localStorage.setItem("mostRecentScore", timeRemaining);
 
     return window.location.assign("/end.html");
   }
@@ -101,12 +99,12 @@ getNewQuestion = () => {
 };
 
 decrementScore = (num) => {
-  timeRemaining -= num
+  timeRemaining -= num;
   if (timeRemaining < 0) {
     timeRemaining = 0;
   }
-  scoreText.innerText = timeRemaining
-}
+  scoreText.innerText = timeRemaining;
+};
 
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
@@ -138,11 +136,5 @@ incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
 };
-
-
-endGame = () => {
-    localStorage.setItem("mostRecentScore", score);
-    window.location.assign("/end.html");
-  };
 
 startGame();
