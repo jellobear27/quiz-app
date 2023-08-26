@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
     <title>Quiz Page</title>
+    
+    <!-- Link to external CSS stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="game.css">
   </head>
   <body>
+    <!-- Container for the page content -->
     <div class="container">
+      <!-- Game section with a question, choices, and progress indicators -->
       <div id="game" class="justify-center flex-column">
+        <!-- HUD (Heads-Up Display) to show question progress and time remaining -->
         <div id="hud">
           <div class="hud-item">
             <p id="progressText" class="hud-prefix">
@@ -26,7 +34,11 @@
             </h1>
           </div>
         </div>
+        
+        <!-- Question text -->
         <h1 id="question">What is the answer to this question</h1>
+        
+        <!-- Choice containers for answer options -->
         <div class="choice-container">
           <p class="choice-prefix">A</p>
           <p class="choice-text" data-number="1">Choice</p>
@@ -45,6 +57,8 @@
         </div>
       </div>
     </div>
+    
+    <!-- Include JavaScript for handling the quiz game -->
     <script src="game.js"></script>
   </body>
 </html>

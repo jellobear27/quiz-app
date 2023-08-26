@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
     <title>Document</title>
+    
+    <!-- Link to external CSS stylesheets -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/cbf7bc816b.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
+    <!-- Container for the page content -->
     <div class="container">
+        <!-- End section with score display, input form, and buttons -->
         <div id="end" class="flex-center flex-column">
+            <!-- Display the most recent score -->
             <h2 id="mostRecentScore">Your Score: <span id="score"></span></h2>
+            
+            <!-- Display the final score -->
             <h1 id="finalScore">0</h1>
+            
+            <!-- Form for entering a name to save the score -->
             <form class="end-form-container">
                 <h2 id="end-text">Enter your name below to save your score!</h2>
+                
+                <!-- Input field for entering the name -->
                 <input type="text" name="username" id="username" placeholder="Enter your name" autocomplete="username">
-                <button class="btn" id="saveScoreBtn" type="submit"
-                onclick="saveHighScore(event)" disabled>Save</button>
-                </form>
-                <a href="/game.html" class="btn">Play Again</a>
-                <a href="/" class="btn">Go Home<i class="fas fa-home"></i></a>
+                
+                <!-- Button to save the score (initially disabled) -->
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+            
+            <!-- Button to play the game again -->
+            <a href="/game.html" class="btn">Play Again</a>
+            
+            <!-- Button to go back to the home page -->
+            <a href="/" class="btn">Go Home<i class="fas fa-home"></i></a>
         </div>
     </div>
-<script src="end.js"></script>
+    
+    <!-- Include JavaScript for handling the end screen -->
+    <script src="end.js"></script>
 </body>
-</html>  
+</html>

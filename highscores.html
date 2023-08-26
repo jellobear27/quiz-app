@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Page title -->
     <title>High Score</title>
+    
+    <!-- Link to external CSS stylesheets -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="highscores.css" />
+    
+    <!-- Link to Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/cbf7bc816b.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- Container for the page content -->
     <div class="container">
+      <!-- High Scores section with a title, leaderboard, and a home button -->
       <div id="highScores" class="flex-center flex-column">
-         <h1 id="finalScore">Leaderboard</h1>
-         <ul id="highScoresList"></ul>
-         <a href="/" class="btn">Go Home<i class="fas fa-home"></i></a>
+        <!-- Main heading -->
+        <h1 id="finalScore">Leaderboard</h1>
+        
+        <!-- Unordered list for displaying high scores -->
+        <ul id="highScoresList"></ul>
+        
+        <!-- "Go Home" button with a link to the home page -->
+        <a href="/" class="btn">Go Home<i class="fas fa-home"></i></a>
       </div>
     </div>
+    
+    <!-- Include JavaScript for handling high scores -->
     <script src="highscores.js"></script>
-  </body>
-</html>

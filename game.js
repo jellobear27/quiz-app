@@ -4,6 +4,7 @@ const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
 
+// Initialize game variables
 let currentQuestion = {};
 let acceptingAnswers = true;
 let timeRemaining = 60;
@@ -12,6 +13,7 @@ let penalty = 5;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// Define quiz questions
 let questions = [
   {
     question: "Commonly used data types DO NOT include:",
@@ -49,9 +51,11 @@ let questions = [
   },
 ];
 
+// Constants
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 4;
 
+// Function to start the game
 startGame = () => {
   questionCounter = 0;
   timeRemaining = 60; // Reset the time
@@ -61,6 +65,7 @@ startGame = () => {
   startTimer();
 };
 
+// Function to start the countdown timer
 startTimer = () => {
   const timerInterval = setInterval(() => {
     timeRemaining--;
@@ -72,10 +77,11 @@ startTimer = () => {
     }
   }, 1000);
 };
-//sets most recent score to time remaining
+
+// Function to get a new question
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-    localStorage.setItem("mostRecentScore", timeRemaining);
+    localStorage.setItem("mostRecentScore", timeRemaining);  //sets most recent score to time remaining
 
     return window.location.assign("/end.html");
   }
@@ -98,6 +104,7 @@ getNewQuestion = () => {
   acceptingAnswers = true;
 };
 
+// Function to decrement the score (time remaining)
 decrementScore = (num) => {
   timeRemaining -= num;
   if (timeRemaining < 0) {
@@ -106,6 +113,7 @@ decrementScore = (num) => {
   scoreText.innerText = timeRemaining;
 };
 
+// Event listeners for user choices
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!acceptingAnswers) return;
@@ -132,6 +140,7 @@ choices.forEach((choice) => {
   });
 });
 
+// Function to increment the score
 incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;

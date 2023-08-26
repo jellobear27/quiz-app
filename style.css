@@ -1,46 +1,55 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
 
+/* Define root-level styles */
 :root {
-  background-color: rgb(29, 26, 26);
+  background-color: rgb(29, 26, 26); /* Define background color */
 }
 
+/* Global styles for all elements */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
-  font-family: "Nova Square", cursive;
+  font-size: 62.5%; /* Set font size to 62.5% for easier rem unit conversion */
+  font-family: "Nova Square", cursive; /* Specify the font-family */
 }
 
+/* Heading 1 styles */
 h1 {
   font-size: 5.4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; /* Add margin below heading */
 }
 
+/* Container styles */
 .container {
   width: 100vw;
-  height: 100vw;
+  height: 100vw; /* Making the container square, adjust as needed */
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 80rem; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
   padding: 2rem;
 }
 
+/* Flex column layout */
 .flex-column {
   display: flex;
   flex-direction: column;
 }
 
+/* Center-align text */
 .flex-center {
   text-align: center;
 }
 
+/* Hidden element style */
 .hidden {
   display: none;
 }
 
+/* Button styles */
 .btn {
   font-size: 2.4rem;
   padding: 2rem 0;
@@ -57,6 +66,7 @@ h1 {
   border-radius: 4px;
 }
 
+/* Button hover effect */
 .btn:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
@@ -64,12 +74,14 @@ h1 {
   transform: scale(1.03);
 }
 
+/* Button hover effect for disabled buttons */
 .btn[disabled]:hover {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
 }
 
+/* High score button styles */
 #highscore-btn {
   background: linear-gradient(
     90deg,
@@ -78,10 +90,12 @@ h1 {
   );
 }
 
+/* High score button hover effect */
 #highscore-btn:hover {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5);
 }
 
+/* Crown icon styles */
 .fa-crown {
   font-size: 2.5rem;
   margin-left: 1rem;
@@ -96,37 +110,43 @@ h1 {
   max-width: 30rem;
 }
 
+/* Input field styles */
 input {
-    margin-bottom: 1rem;
-    width: 20rem;
-    padding: 1.5rem;
-    font-size: 1.8rem;
-    border: none;
-    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
 }
 
+/* Input field placeholder color */
 input::placeholder {
-    color: #aaa;
+  color: #aaa;
 }
 
+/* Username input styles */
 #username {
-    margin-bottom: 3rem;
-    width: 100%;
-    outline: none;
+  margin-bottom: 3rem;
+  width: 100%;
+  outline: none;
 }
 
+/* End text styles */
 #end-text {
-    font-size: 2.4rem;
-    color: #fff;
-    text-align: center;
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
 }
 
+/* Save Score button styles */
 #saveScoreBtn {
-    border: none;
+  border: none;
 }
 
+/* Home icon styles */
 .fa-home {
-    margin-left: 1rem;
-    font-size: 2rem;
-    color: rgb(28, 26, 26);
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: rgb(28, 26, 26);
 }

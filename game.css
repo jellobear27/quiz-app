@@ -1,7 +1,9 @@
+/* Body styles, setting text color to white */
 body {
   color: #fff;
 }
 
+/* Styles for choice containers (answer options) */
 .choice-container {
   display: flex;
   margin-bottom: 0.8rem;
@@ -12,6 +14,7 @@ body {
   min-width: 80rem;
 }
 
+/* Hover effect for choice containers */
 .choice-container:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
@@ -19,16 +22,19 @@ body {
   transform: transform 100ms;
 }
 
+/* Styles for the prefix (e.g., A, B, C) within choice containers */
 .choice-prefix {
   padding: 2rem 2.5rem;
   color: white;
 }
 
+/* Styles for the text of the answer choices */
 .choice-text {
   padding: 2rem;
   width: 100%;
 }
 
+/* Styles for correct answer choice */
 .correct {
   background: linear-gradient(
     32deg,
@@ -37,6 +43,7 @@ body {
   );
 }
 
+/* Styles for incorrect answer choice */
 .incorrect {
   background: linear-gradient(
     32deg,
@@ -45,21 +52,24 @@ body {
   );
 }
 
-/* Heads up Display */
+/* Styles for the Heads-Up Display (HUD) */
 #hud {
   display: flex;
   justify-content: space-between;
 }
 
+/* Styles for the HUD prefix text */
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
 }
 
+/* Styles for the HUD main text */
 .hud-main-text {
   text-align: center;
 }
 
+/* Styles for the progress bar */
 #progressBar {
   width: 20rem;
   height: 3rem;
@@ -69,14 +79,17 @@ body {
   overflow: hidden;
 }
 
+/* Styles for the filled portion of the progress bar */
 #progressBarfull {
   height: 100%;
   background-color: rgb(11, 223, 36);
   width: 0%;
 }
 
+/* Media query for screens with a maximum width of 768px */
 @media screen and (max-width: 768px) {
   .choice-container {
-    min-width: 40rem;
+    min-width: 40rem; /* Adjust the minimum width for smaller screens */
   }
 }
+
