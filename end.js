@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
     // Redirect the user back to the main page (index.html)
-    window.location.assign("./index.html");
+    window.location.assign(".index.html");
   };
 });
