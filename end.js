@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get references to DOM elements
   const username = document.querySelector("#username");
   const saveScoreBtn = document.querySelector("#saveScoreBtn");
-  const finalScore = document.querySelector("#finalScore");
-  const scoreEl = this.documentElement.querySelector("#score");
+  const scoreEl = document.querySelector("#score");
 
   // Retrieve the most recent score from local storage
   const mostRecentScore = localStorage.getItem("mostRecentScore");
@@ -17,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Define the maximum number of high scores to display
   const MAX_HIGH_SCORES = 5;
-
-  // Display the most recent score on the page
-  finalScore.innerText = mostRecentScore;
 
   // Enable the save button when the user enters a username
   username.addEventListener("keyup", () => {
@@ -53,4 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Redirect the user back to the main page (index.html)
     window.location.assign("index.html");
   };
+
+  // Attach the saveHighScore function to the saveScoreBtn click event
+  saveScoreBtn.addEventListener("click", saveHighScore);
 });
+
